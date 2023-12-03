@@ -64,4 +64,16 @@ cmp.setup.cmdline(':', {
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['<YOUR_LSP_SERVER>'].setup {capabilities = capabilities}
+require('lspconfig')['lua_ls'].setup {capabilities = capabilities}
+require('lspconfig')['bashls'].setup {capabilities = capabilities}
+require('lspconfig')['cmake'].setup {capabilities = capabilities}
+require('lspconfig')['cucumber_language_server'].setup {
+    capabilities = capabilities
+}
+require('lspconfig')['dockerls'].setup {capabilities = capabilities}
+require('lspconfig')['docker_compose_language_service'].setup {
+    capabilities = capabilities
+}
+require('lspconfig')['pyright'].setup {capabilities = capabilities}
+require('lspconfig')['clangd'].setup {capabilities = capabilities}
+require('lspconfig')['rust_analyzer'].setup {capabilities = capabilities}
