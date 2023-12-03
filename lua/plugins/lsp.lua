@@ -1,15 +1,11 @@
 -- Setup language servers.
 local lspconfig = require('lspconfig')
-local navbuddy = require('nvim-navbuddy')
 lspconfig.bashls.setup {}
 lspconfig.cmake.setup {}
 lspconfig.cucumber_language_server.setup {}
 lspconfig.dockerls.setup {}
 lspconfig.docker_compose_language_service.setup {}
 lspconfig.pyright.setup {}
-lspconfig.clangd.setup {
-    on_attach = function(client, bufnr) navbuddy.attach(client, bufnr) end
-}
 lspconfig.rust_analyzer.setup {
     -- Server-specific settings. See `:help lspconfig-setup`
     settings = {['rust-analyzer'] = {}}

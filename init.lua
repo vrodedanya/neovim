@@ -18,3 +18,7 @@ require('plugins.dap')
 require('plugins.cmake_tools')
 require('plugins.navbuddy')
 require('plugins.refactoring')
+
+-- LSP
+require('lsp.clangd')
+require('lsp.lua_ls')

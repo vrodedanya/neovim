@@ -4,9 +4,11 @@ require("cmake-tools").setup {
     -- auto generate when save CMakeLists.txt
     cmake_regenerate_on_save = true,
     -- this will be passed when invoke `CMakeGenerate`
-    cmake_generate_options = {"-DCMAKE_EXPORT_COMPILE_COMMANDS=1"},
+    cmake_generate_options = {
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=1", "-G \"Ninja\""
+    },
     -- this will be passed when invoke `CMakeBuild`
-    cmake_build_options = {},
+    cmake_build_options = {"-j"},
     -- support macro expansion:
     --       ${kit}
     --       ${kitGenerator}
